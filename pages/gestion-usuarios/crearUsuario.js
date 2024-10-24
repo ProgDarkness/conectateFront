@@ -14,9 +14,15 @@ import { Password } from 'primereact/password'
 function CrearUsuario({ visibled, setVisibled, refresUser }) {
   const toast = useRef(null)
   const [state, setState] = useState({
+    nombre: '',
+    primerApellido: '',
+    segundoNombre: '',
+    segundoApellido: '',
+    cedula: '',
+    gerencia: '',
     usuario: '',
-    clave: '',
-    correo: ''
+    correo: '',
+    Clave: ''
   })
   const [confirClave, setConfirClave] = useState(null)
 
@@ -63,9 +69,15 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
   const validarContraseña = () => {
     if (confirClave === state.clave) {
       insertNewUser({
+        pri_nombre: state.nombre,
+        seg_nombre: state.segundoNombre,
+        pri_apellido: state.primerApellido,
+        seg_apellido: state.segundoApellido,
+        gerencia: state.gerencia,
+        cedula_usr: state.cedula,
         usuario: state.usuario,
         correo: state.correo,
-        clave: CryptoJS.AES.encrypt(
+        hashClave: CryptoJS.AES.encrypt(
           state.clave,
           process.env.NEXT_PUBLIC_SECRET_KEY
         ).toString()
@@ -78,9 +90,15 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
           life: 4000
         })
         setState({
+          nombre: '',
+          primerApellido: '',
+          segundoNombre: '',
+          segundoApellido: '',
+          cedula: '',
+          gerencia: '',
           usuario: '',
-          clave: '',
-          correo: ''
+          correo: '',
+          clave: ''
         })
         setConfirClave('')
       })
@@ -111,7 +129,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
       draggable={false}
       contentClassName="redondeo-dialog-content"
       headerClassName="redondeo-dialog-header"
-      position="top-right"
+      position="top-left"
     >
       <Toast ref={toast} />
       <div className="grid grid-cols-3 gap-4">
@@ -120,14 +138,14 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
             <FontAwesomeIcon icon={faUser} />
           </span>
           <InputText
-            id="user"
-            value={state.usuario}
+            id="cedula"
+            value={state.cedula}
             maxLength={8}
             autoComplete="off"
-            placeholder="Usuario"
+            placeholder="Cedula"
             className="rounded-xl"
             onChange={({ target: { value } }) =>
-              setState((ps) => ({ ...ps, usuario: value }))
+              setState((ps) => ({ ...ps, cedula: value }))
             }
           />
         </div>
@@ -136,10 +154,100 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
             <FontAwesomeIcon icon={faUser} />
           </span>
           <InputText
-            id="user"
+            id="nombre"
+            value={state.nombre}
+            autoComplete="off"
+            placeholder="Nombre"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, nombre: value }))
+            }
+          />
+          </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="segundo_nombre"
+            value={state.segundoNombre}
+            autoComplete="off"
+            placeholder="Segundo Nombre"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, segundoNombre: value }))
+            }
+          />
+           </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="usuario"
+            value={state.usuario}
+            autoComplete="off"
+            placeholder="Usuario"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, usuario: value }))
+            }
+          />
+          </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="primer_apellido"
+            value={state.primerApellido}
+            autoComplete="off"
+            placeholder="Apellido"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, primerApellido: value }))
+            }
+          />
+          </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="segundo_apellido"
+            value={state.segundoApellido}
+            autoComplete="off"
+            placeholder="Segundo Apellido"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, segundoApellido: value }))
+            }
+          />
+          </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="gerencia"
+            value={state.gerencia}
+            autoComplete="off"
+            placeholder="Gerencia"
+            className="rounded-xl"
+            onChange={({ target: { value } }) =>
+              setState((ps) => ({ ...ps, gerencia: value }))
+            }
+          />
+          </div>
+        <div className="p-inputgroup">
+          <span className="p-inputgroup-addon span-sesion">
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <InputText
+            id="correo"
             value={state.correo}
             autoComplete="off"
-            placeholder="Correo electrónico"
+            placeholder="Correo"
             className="rounded-xl"
             onChange={({ target: { value } }) =>
               setState((ps) => ({ ...ps, correo: value }))

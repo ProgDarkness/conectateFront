@@ -17,9 +17,15 @@ import { faUser, faKey, faCheck } from '@fortawesome/free-solid-svg-icons'
 function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
   const toast = useRef(null)
   const [state, setState] = useState({
+    nombre: '',
+    primerApellido: '',
+    segundoNombre: '',
+    segundoApellido: '',
+    cedula: '',
+    lugardetrabajo: '',
     usuario: '',
-    clave: '',
-    correo: ''
+    correo: '',
+    clave: ''
   })
   const [confirClave, setConfirClave] = useState(null)
 
@@ -51,9 +57,15 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
           life: 4000
         })
         setState({
+          nombre: '',
+          primerApellido: '',
+          segundoNombre: '',
+          segundoApellido: '',
+          cedula: '',
+          lugardetrabajo: '',
           usuario: '',
-          clave: '',
-          correo: ''
+          correo: '',
+          clave: ''
         })
         setConfirClave('')
       })
@@ -112,7 +124,97 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, usuario: value }))
                 }
               />
-            </div>
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.nombre}
+                autoComplete="off"
+                placeholder="Nombre"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, nombre: value }))
+                }
+              />
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.segundoNombre}
+                autoComplete="off"
+                placeholder="Segundo Nombre"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, segundoNombre: value }))
+                }
+              />
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.primerApellido}
+                autoComplete="off"
+                placeholder="PrimerApellido"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, primerApellido: value }))
+                }
+              />
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.segundoApellido}
+                autoComplete="off"
+                placeholder="Segundo Apellido"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, segundoApellido: value }))
+                }
+              />
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.cedula}
+                autoComplete="off"
+                placeholder="Cedula"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, cedula: value }))
+                }
+              />
+              </div>
+            <div className="p-inputgroup h-8 mt-5">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                id="user"
+                value={state.lugardetrabajo}
+                autoComplete="off"
+                placeholder="Lugar De Trabajo"
+                className="rounded-xl"
+                onChange={({ target: { value } }) =>
+                  setState((ps) => ({ ...ps, lugardetrabajo: value }))
+                }
+              />
+              </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
