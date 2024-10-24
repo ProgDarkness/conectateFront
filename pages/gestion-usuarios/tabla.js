@@ -41,7 +41,7 @@ function Tabla({ tokenQuery, permiso }) {
   const rolBody = (rowData) => {
     return (
       <span
-        className={`text-white bg-[#3f51b5] p-1 font-extrabold redondeo-lg`}
+        className={`text-white bg-[#1e74cb] p-1 font-extrabold redondeo-lg`}
       >
         {rowData.nb_rol}
       </span>
@@ -172,7 +172,7 @@ function Tabla({ tokenQuery, permiso }) {
     <Toolbar
       left={leftContents}
       right={rightContents}
-      className="bg-[#dbcdae] p-2 redondeo-xl"
+      className="bg-[#b1b0b0] p-2 redondeo-xl"
     />
   )
 

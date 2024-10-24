@@ -50,7 +50,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
       initial="hidden"
       animate="visible"
       style={{ fontSize: '27px', fontWeight: '600', textAlign: 'center' }}
-      className="bg-[#dbcdae] text-white w-80 redondeo-xl"
+      className="bg-[#b1b0b0] text-white w-80 redondeo-xl"
     >
       <h1>CREAR USUARIO</h1>
     </motion.div>

@@ -206,7 +206,7 @@ export default function PerfilUsuario() {
     return (
       <AppLayoutMenus items={items}>
         <div className="flex justify-center items-center">
-          <div className=" text-[#dbcdae] text-2xl xl:text-4xl font-extrabold tracking-widest">
+          <div className=" text-[#b1b0b0] text-2xl xl:text-4xl font-extrabold tracking-widest">
             <h1>Cargando...</h1>
             <ProgressSpinner
               className="w-[50px] h-[50px] mt-[10px] ml-[80px]"

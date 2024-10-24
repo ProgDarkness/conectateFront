@@ -35,7 +35,7 @@ function Menu({ items }) {
           command: eval(item.command),
           style: item.command.includes(router.route)
             ? {
-                backgroundColor: '#dbcdae',
+                backgroundColor: '#b1b0b0',
                 color: '#000000'
               }
             : { backgroundColor: '#ffffff' }
