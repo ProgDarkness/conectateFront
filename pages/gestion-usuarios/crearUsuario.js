@@ -22,9 +22,9 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
     gerencia: '',
     usuario: '',
     correo: '',
-    Clave: ''
+    clave: ''
   })
-  const [confirClave, setConfirClave] = useState(null)
+  const [confirClave, setConfirClave] = useState('')
 
   function animation(input) {
     // eslint-disable-next-line prefer-const
@@ -68,7 +68,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
 
   const validarContraseña = () => {
     if (confirClave === state.clave) {
-      insertNewUser({
+      const inputNewUser = {
         pri_nombre: state.nombre,
         seg_nombre: state.segundoNombre,
         pri_apellido: state.primerApellido,
@@ -77,31 +77,37 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
         cedula_usr: state.cedula,
         usuario: state.usuario,
         correo: state.correo,
-        hashClave: CryptoJS.AES.encrypt(
+        clave: CryptoJS.AES.encrypt(
           state.clave,
           process.env.NEXT_PUBLIC_SECRET_KEY
         ).toString()
-      }).then(({ inserNewUser: { status, message, type } }) => {
-        refresUser()
-        toast.current.show({
-          severity: type,
-          summary: 'Atención',
-          detail: message,
-          life: 4000
-        })
-        setState({
-          nombre: '',
-          primerApellido: '',
-          segundoNombre: '',
-          segundoApellido: '',
-          cedula: '',
-          gerencia: '',
-          usuario: '',
-          correo: '',
-          clave: ''
-        })
-        setConfirClave('')
-      })
+      }
+
+      console.log('asdsdsadas')
+
+      insertNewUser({ inputNewUser }).then(
+        ({ inserNewUser: { status, message, type } }) => {
+          refresUser()
+          toast.current.show({
+            severity: type,
+            summary: 'Atención',
+            detail: message,
+            life: 4000
+          })
+          setState({
+            nombre: '',
+            primerApellido: '',
+            segundoNombre: '',
+            segundoApellido: '',
+            cedula: '',
+            gerencia: '',
+            usuario: '',
+            correo: '',
+            clave: ''
+          })
+          setConfirClave('')
+        }
+      )
     } else {
       setConfirClave('')
       toast.current.show({
@@ -163,7 +169,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, nombre: value }))
             }
           />
-          </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />
@@ -178,7 +184,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, segundoNombre: value }))
             }
           />
-           </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />
@@ -193,7 +199,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, usuario: value }))
             }
           />
-          </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />
@@ -208,7 +214,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, primerApellido: value }))
             }
           />
-          </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />
@@ -223,7 +229,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, segundoApellido: value }))
             }
           />
-          </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />
@@ -238,7 +244,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
               setState((ps) => ({ ...ps, gerencia: value }))
             }
           />
-          </div>
+        </div>
         <div className="p-inputgroup">
           <span className="p-inputgroup-addon span-sesion">
             <FontAwesomeIcon icon={faUser} />

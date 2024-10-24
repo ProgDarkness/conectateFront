@@ -34,8 +34,8 @@ export default {
     }
   `,
   INSERT_NEW_USER: gql`
-    mutation insertNewUser($usuario: String!, $correo: String!, $clave: String!) {
-      inserNewUser(usuario: $usuario, correo: $correo, clave: $clave) {
+    mutation inserNewUser($inputNewUser: InputNewUser!) {
+      inserNewUser(input: $inputNewUser) {
         status
         message
         type

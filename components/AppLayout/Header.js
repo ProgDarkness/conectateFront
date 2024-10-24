@@ -1,12 +1,12 @@
 import styles from 'styles/Header.module.css'
-import logo from 'public/favicon.ico'
+import logo from 'public/favicon1.png'
 import Image from 'next/image'
 
 export default function Header({ verMenu }) {
   return (
     <header id="header-principal" className={styles.header}>
       <div className="w-full bg-[#b1b0b0] h-[3rem] flex">
-        <div className="w-16 h-full flex items-center">
+        <div className="w-14 h-full flex items-center p-2">
           <div className="w-full">
             <Image
               src={logo}
