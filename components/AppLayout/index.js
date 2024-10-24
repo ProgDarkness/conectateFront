@@ -14,6 +14,8 @@ export default function Index({
       <Header verMenu={verMenu} />
       <main className={styles.main}>{children}</main>
       <Footer verFooter={verFooter} />
+
+      
     </div>
   )
 }
