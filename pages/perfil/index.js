@@ -296,17 +296,6 @@ export default function PerfilUsuario() {
             </div>
           </div>
           <div className="block">
-            <div className="p-inputgroup">
-              <span className="p-inputgroup-addon span-sesion">
-                <FontAwesomeIcon icon={faUser} />
-              </span>
-              <InputText
-                placeholder="Correo Electronico"
-                className="rounded-xl"
-              />
-            </div>
-          </div>
-          <div className="block">
             <label htmlFor="gerencia" className="">Gerencia</label>
             <div className="p-inputgroup" >
               <span className="p-inputgroup-addon span-sesion">
