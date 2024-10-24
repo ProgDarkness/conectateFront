@@ -36,10 +36,10 @@ export default function PerfilUsuario() {
   const { data: Acceso } = useSWR(
     rutaActive && co_rol
       ? [
-          GQLLogin.GET_ACCESOS_ROL,
-          { ruta: rutaActive, idRol: parseInt(co_rol) },
-          token
-        ]
+        GQLLogin.GET_ACCESOS_ROL,
+        { ruta: rutaActive, idRol: parseInt(co_rol) },
+        token
+      ]
       : null
   )
 
@@ -240,13 +240,21 @@ export default function PerfilUsuario() {
         rejectLabel="NO"
       />
       <div className="flex flex-row">
-        <div className="grid grid-cols-5 gap-2 basis-9/12">
+        <div className="grid grid-cols-2 gap-2 basis-9/12">
           <div className="block">
             <div className="p-inputgroup">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
               </span>
-              <InputText placeholder="Primer Nombres" className="rounded-xl" />
+              <InputText disabled placeholder="Cedula" className="rounded-xl" />
+            </div>
+          </div>
+          <div className="block">
+            <div className="p-inputgroup">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText placeholder="Primer Nombre" className="rounded-xl" />
             </div>
           </div>
           <div className="block">
@@ -284,6 +292,30 @@ export default function PerfilUsuario() {
               <InputText
                 placeholder="Correo Electronico"
                 className="rounded-xl"
+              />
+            </div>
+          </div>
+          <div className="block">
+            <div className="p-inputgroup">
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText
+                placeholder="Correo Electronico"
+                className="rounded-xl"
+              />
+            </div>
+          </div>
+          <div className="block">
+            <label htmlFor="gerencia" className="">Gerencia</label>
+            <div className="p-inputgroup" >
+              <span className="p-inputgroup-addon span-sesion">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <InputText disabled
+                placeholder="Gerencia"
+                className="rounded-xl"
+                value={""}
               />
             </div>
           </div>

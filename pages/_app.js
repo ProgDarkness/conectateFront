@@ -9,7 +9,7 @@ import { useIdleTimer } from 'react-idle-timer'
 import { useRouter } from 'next/router'
 import { addLocale } from 'primereact/api'
 // import 'primereact/resources/themes/mdc-light-indigo/theme.css' // theme
-import 'primereact/resources/themes/lara-light-purple/theme.css'
+import 'primereact/resources/themes/lara-light-blue/theme.css'
 import 'primereact/resources/primereact.min.css' // core css
 import 'primeicons/primeicons.css' // icons
 import 'styles/globals.css'
