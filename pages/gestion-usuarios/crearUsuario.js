@@ -83,8 +83,6 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
         ).toString()
       }
 
-      console.log('asdsdsadas')
-
       insertNewUser({ inputNewUser }).then(
         ({ inserNewUser: { status, message, type } }) => {
           refresUser()

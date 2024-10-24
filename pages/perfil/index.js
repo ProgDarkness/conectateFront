@@ -49,8 +49,6 @@ export default function PerfilUsuario() {
       : null
   )
 
-  console.log(fotoPerfil)
-
   useEffect(() => {
     if (fotoPerfil?.obtenerFotoPerfilUsuario.response) {
       setImagenPerfil(fotoPerfil?.obtenerFotoPerfilUsuario.response.archivo)
