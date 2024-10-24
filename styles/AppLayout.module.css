@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   /*align-items: center;*/
-  background: url('../public/images/fondo_lazzy2.png') no-repeat center;
+  /*background: url('') no-repeat center;*/
   background-size: cover;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   /*align-items: center;*/
-  background: url('../public/images/fondo_lazzy2.png') no-repeat center;
+  /* background: url('') no-repeat center; */
   background-size: cover;
   overflow: hidden;
 }
