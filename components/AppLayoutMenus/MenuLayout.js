@@ -33,17 +33,21 @@ function Menu({ items }) {
           label: item.label,
           icon: item.icon,
           command: eval(item.command),
-          style: item.command.includes(router.route)
+          /* style: item.command.includes(router.route)
             ? {
-                backgroundColor: '#b1b0b0',
-                color: '#000000'
+                backgroundColor: '#006993',
+                color: '#ffffff'
               }
-            : { backgroundColor: '#ffffff' }
+            : { backgroundColor: '#ffffff', color: '#000000' }, */
+          className: item.command.includes(router.route)
+            ? 'bg-[#006993] text-white'
+            : 'bg-[#ffffff] text-black'
         }
       })
       _itemsMenu.push({
         label: 'Salir',
         icon: 'pi pi-arrow-left',
+        className: 'text-black',
         command: () => setConfirmSalir(true)
       })
       setItemsMenu(_itemsMenu)
@@ -78,11 +82,12 @@ function Menu({ items }) {
         #ReponseMenu.p-slidemenu .p-slidemenu-backward span {
           vertical-align: middle;
         }
-        #slide-menu .p-menuitem * {
+        .p-menuitem * {
           color: inherit !important;
         }
         .p-slidemenu .p-menuitem-link:not(.p-disabled):hover {
-          background: #dbcdae;
+          background: #006993;
+          color: #ffffff;
           border-radius: 0.5rem 0rem 0.5rem 0.5rem;
         }
       `}</style>

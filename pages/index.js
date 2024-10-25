@@ -94,7 +94,7 @@ export default function Index() {
           <div>
             {!visiblebDialogNewUser && (
               <Card
-                className="w-[25%] text-center bg-[#b1b0b0] text-white rounded-xl mb-[10%]"
+                className="w-[25%] text-center bg-[#006993] text-white rounded-xl mb-[10%]"
                 style={{ marginLeft: 'auto', marginRight: 'auto' }}
               >
                 <div className="grid grid-cols-1 gap-6 w-4/5 mx-auto">

@@ -96,7 +96,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
         showHeader={false}
         modal={false}
         contentClassName="rounded-xl"
-        contentStyle={{ backgroundColor: '#dbcdae' }}
+        contentStyle={{ backgroundColor: '#006993' }}
         onHide={() => {}}
         className="mb-[10%] w-[25%] rounded-xl"
       >
@@ -124,7 +124,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, usuario: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -139,7 +139,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, nombre: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -154,7 +154,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, segundoNombre: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -169,7 +169,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, primerApellido: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -184,7 +184,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, segundoApellido: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -199,7 +199,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, cedula: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
@@ -214,7 +214,7 @@ function DialogRegister({ visiblebDialogNewUser, setVisiblebDialogNewUser }) {
                   setState((ps) => ({ ...ps, lugardetrabajo: value }))
                 }
               />
-              </div>
+            </div>
             <div className="p-inputgroup h-8 mt-5">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />

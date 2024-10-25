@@ -36,10 +36,10 @@ export default function PerfilUsuario() {
   const { data: Acceso } = useSWR(
     rutaActive && co_rol
       ? [
-        GQLLogin.GET_ACCESOS_ROL,
-        { ruta: rutaActive, idRol: parseInt(co_rol) },
-        token
-      ]
+          GQLLogin.GET_ACCESOS_ROL,
+          { ruta: rutaActive, idRol: parseInt(co_rol) },
+          token
+        ]
       : null
   )
 
@@ -204,7 +204,7 @@ export default function PerfilUsuario() {
     return (
       <AppLayoutMenus items={items}>
         <div className="flex justify-center items-center">
-          <div className=" text-[#b1b0b0] text-2xl xl:text-4xl font-extrabold tracking-widest">
+          <div className=" text-[#006993] text-2xl xl:text-4xl font-extrabold tracking-widest">
             <h1>Cargando...</h1>
             <ProgressSpinner
               className="w-[50px] h-[50px] mt-[10px] ml-[80px]"
@@ -294,15 +294,18 @@ export default function PerfilUsuario() {
             </div>
           </div>
           <div className="block">
-            <label htmlFor="gerencia" className="">Gerencia</label>
-            <div className="p-inputgroup" >
+            <label htmlFor="gerencia" className="">
+              Gerencia
+            </label>
+            <div className="p-inputgroup">
               <span className="p-inputgroup-addon span-sesion">
                 <FontAwesomeIcon icon={faUser} />
               </span>
-              <InputText disabled
+              <InputText
+                disabled
                 placeholder="Gerencia"
                 className="rounded-xl"
-                value={""}
+                value={''}
               />
             </div>
           </div>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Header({ verMenu }) {
   return (
     <header id="header-principal" className={styles.header}>
-      <div className="w-full bg-[#b1b0b0] h-[3rem] flex">
+      <div className="w-full bg-[#006993] h-[3rem] flex bg-opacity-90">
         <div className="w-14 h-full flex items-center p-2">
           <div className="w-full">
             <Image

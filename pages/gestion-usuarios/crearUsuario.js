@@ -50,7 +50,7 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
       initial="hidden"
       animate="visible"
       style={{ fontSize: '27px', fontWeight: '600', textAlign: 'center' }}
-      className="bg-[#b1b0b0] text-white w-80 redondeo-xl"
+      className="bg-[#006993] text-white w-80 redondeo-xl"
     >
       <h1>CREAR USUARIO</h1>
     </motion.div>
@@ -329,18 +329,18 @@ function CrearUsuario({ visibled, setVisibled, refresUser }) {
           opacity: 1;
         }
         .p-selectbutton .p-button.p-highlight {
-          background: #dbcdae;
-          border-color: #dbcdae;
+          background: #006993;
+          border-color: #006993;
           color: white;
         }
         button:not(button):not(a):not(.p-disabled):active {
-          background: #dbcdae;
-          border-color: #dbcdae;
+          background: #006993;
+          border-color: #006993;
           color: white;
         }
         .p-selectbutton .p-button:focus.p-highlight {
-          background: #dbcdae;
-          border-color: #dbcdae;
+          background: #006993;
+          border-color: #006993;
           color: white;
         }
         .redondeo-dialog-header {

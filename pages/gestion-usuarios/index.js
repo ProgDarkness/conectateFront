@@ -7,7 +7,6 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import { ProgressSpinner } from 'primereact/progressspinner'
 
-
 export default function GestionUsuario() {
   const router = useRouter()
   const rutaActive = router?.route
@@ -43,7 +42,7 @@ export default function GestionUsuario() {
     return (
       <AppLayoutMenus items={items}>
         <div className="flex justify-center items-center">
-          <div className=" text-[#b1b0b0] text-2xl xl:text-4xl font-extrabold tracking-widest">
+          <div className=" text-[#006993] text-2xl xl:text-4xl font-extrabold tracking-widest">
             <h1>Cargando...</h1>
             <ProgressSpinner
               className="w-[50px] h-[50px] mt-[10px] ml-[80px]"
@@ -64,7 +63,7 @@ export default function GestionUsuario() {
   }
   return (
     <AppLayoutMenus items={items}>
-      <Tabla tokenQuery={token} permiso={permisos}/>
+      <Tabla tokenQuery={token} permiso={permisos} />
     </AppLayoutMenus>
   )
 }
